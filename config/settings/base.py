@@ -171,8 +171,14 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 YOLOV5_ROOTDIR = os.path.join(BASE_DIR, 'yolov5')
 YOLOV5_WEIGTHS_DIR = os.path.join(YOLOV5_ROOTDIR, 'weights')
+
+CUSTOM_ROOTDIR = os.path.join(BASE_DIR, 'custom')
+CUSTOM_WEIGTHS_DIR = os.path.join(CUSTOM_ROOTDIR, 'weights')
 if not os.path.exists(YOLOV5_WEIGTHS_DIR):
     os.makedirs(YOLOV5_WEIGTHS_DIR)
+
+if not os.path.exists(CUSTOM_WEIGTHS_DIR):
+    os.makedirs(CUSTOM_WEIGTHS_DIR)
 
 MODEL_CONFIDENCE = 0.45
 PAGINATE_DETECTION_IMAGES_NUM = 20

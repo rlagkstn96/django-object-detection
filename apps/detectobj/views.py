@@ -86,6 +86,7 @@ class InferenceImageDetectionView(LoginRequiredMixin, DetailView):
         # classnames = model.names  (display classes in the model)
 
         results = model(img, size=640)
+        print(results)
         results_list = results.pandas().xyxy[0].to_json(orient="records")
         results_list = literal_eval(results_list)
         classes_list = [item["name"] for item in results_list]
