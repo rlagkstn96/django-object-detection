@@ -17,9 +17,6 @@
                 {% if user_imagesets %}
                 <a href="{% url 'images:imageset_list_url' %}" class="btn btn-sm btn-outline-success" type="button">My ImageSets List</a>
                 {% endif %}
-                {% if public_imagesets %}
-                <a href="{% url 'images:imageset_list_url' %}" class="btn btn-sm btn-outline-success" type="button">Public ImageSets List</a>
-                {% endif %}
             </li>
             <li class="list-group-item">Convert uploaded image size to 640 x 640. (For faster detection)</li>
             <li class="list-group-item">Upload a custom pre-trained model: 
